@@ -19,7 +19,7 @@
                                     <th>No</th>
                                     <th>Nama Pemesan</th>
                                     <th>NIK</th>
-                                    <th>NO PEMESAN</th>
+                                    <th>NO HP</th>
                                     <th>EMAIL</th>
                                     <th>TGL CEKIN</th>
                                     <th>TGL CEKOUT
