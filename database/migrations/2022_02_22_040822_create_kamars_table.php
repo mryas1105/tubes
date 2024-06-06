@@ -18,7 +18,7 @@ class CreateKamarsTable extends Migration
             $table->string('tipe_kamar');
             $table->string('jumlah_kamar');
             $table->string('harga_kamar');
-            $table->string('gambar');
+            $table->string('photo');
             $table->timestamps();
         });
     }

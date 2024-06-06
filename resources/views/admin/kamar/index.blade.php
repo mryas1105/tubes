@@ -29,11 +29,11 @@
                             </thead>
                             <tbody>
                                 @foreach ($kamar as $k)
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $k->tipe_kamar }}</td>
-                                        <td>{{ $k->harga_format() }}</td>
-                                        <td>{{ $k->gambar}}</td>
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $k->tipe_kamar }}</td>
+                                    <td>{{ $k->harga_format() }}</td>
+                                    <td><img src="{{ asset('storage/kamar/1717651233tesesss.jpg') }}" alt="getelll"></td>
                                         <td>{{ $k->jumlah_kamar }}</td>
                                         <td>
                                             <a class="btn btn-primary" href="/admin/kamar/{{ $k->id }}">Edit</a>

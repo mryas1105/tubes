@@ -28,16 +28,17 @@ class KamarController extends Controller
     {
         $this->validate($request, [
             'tipe_kamar' => 'required',
-            'gambar' => 'required',
+            'photo' => 'nullable|image|max:2048',
             'jumlah' => 'required',
             'harga' => 'required',
         ]);
         $new_kamar = new Kamar;
-        if ($request->hasFile('gambar')) {
-            $gambar = $request->file('gambar');
-            $nama_file = time() . $gambar->getClientOriginalName();
-            Storage::putFileAs('public/gambar', $gambar, $nama_file);
-            $new_kamar->gambar = $nama_file;
+        if ($request->hasFile('photo')) {
+
+            $file = $request->file('photo');
+            $fileName = $file->getClientOriginalName();
+            $filePath = $file->storeAs('public/kamar/' , $fileName);
+            $new_kamar->photo = $fileName;
         }
         $new_kamar->tipe_kamar = $request->tipe_kamar;
         $new_kamar->jumlah_kamar = $request->jumlah;
@@ -57,12 +58,13 @@ class KamarController extends Controller
             'tipe_kamar' => 'required',
             'jumlah' => 'required',
             'harga' => 'required',
+            'photo'=>'nullable|image|max:2048'
         ]);
-        if ($request->hasFile('gambar')) {
-            $gambar = $request->file('gambar');
+        if ($request->hasFile('photo')) {
+            $gambar = $request->file('photo');
             $nama_file = time() . $gambar->getClientOriginalName();
             Storage::putFileAs('public/gambar', $gambar, $nama_file);
-            $kamar->gambar = $nama_file;
+            $kamar->photo = $nama_file;
         }
         $kamar->tipe_kamar = $request->tipe_kamar;
         $kamar->jumlah_kamar = $request->jumlah;

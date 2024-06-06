@@ -125,7 +125,7 @@
           <div class="contact-address">
             <i class="bi bi-geo-alt"></i>
             <h3>Alamat</h3>
-            <address>Jalan Raya Jombang-Surabaya Kavling 19 No.111A, Kandangan-Jawa Timur</address>
+            <address>Jalan Raya Surabaya Ketintang 19 No.111A, Surabya-Jawa Timur</address>
           </div>
         </div>
 
@@ -133,7 +133,7 @@
           <div class="contact-phone">
             <i class="bi bi-phone"></i>
             <h3>Telepon</h3>
-            <p><a href="tel:+155895548855">(0321) 8777654</a></p>
+            <p><a href="tel:+155895548855">(62) 8777654</a></p>
           </div>
         </div>
 
